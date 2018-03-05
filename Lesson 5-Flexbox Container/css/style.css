@@ -1,0 +1,33 @@
+/* YOUR CUSTOM STYLES */
+
+body{
+	color: #fff;
+}
+
+div{
+	color: #2E2E2E;
+}
+
+.d-flex{
+	background: #33B5E5;
+}
+
+.backred{
+	background: #EA4335;
+}
+
+.divmargin{
+	margin-top: 10px;
+}
+
+.paddingp2{
+	margin: 2.5px;
+	background: #EA4335;
+	text-align: center;
+}
+
+.backwhite{
+	background: white;
+}
+
+/*                    */

@@ -1,0 +1,32 @@
+/* YOUR CUSTOM STYLES */
+
+body{
+	color: #fff;
+}
+
+div{
+	color: #2E2E2E;
+}
+
+.mt-5, .my-5 {
+    margin-top: 2rem!important;
+}
+
+nav{
+	background: #0195BA;
+}
+
+.whitecolor{
+	color: white;
+}
+
+.nav-item a {
+    transition: .35s;
+    color: #ffffff;
+}
+
+
+
+
+
+/*                    */

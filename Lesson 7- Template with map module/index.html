@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-toggleable-md navbar-light">
+            <div class="container">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="color: white;">
+                    <strong>Navbar</strong>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav1">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" style="color: white;">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;">Pricing</a>
+                        </li>
+                        <li class="nav-item dropdown btn-group">
+                            <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">Dropdown</a>
+                            <div class="dropdown-menu dropdown" aria-labelledby="dropdownMenu1">
+                                <a class="dropdown-item">Action</a>
+                                <a class="dropdown-item">Another action</a>
+                                <a class="dropdown-item">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--/.Navbar-->
+    </header>
+
+<!-- Main -->
+<main class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Page Content starts here</h1>
+                <hr>
+            </div>        
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <!--Naked Form-->
+                        <div class="card-block">
+
+                            <!--Header-->
+                            <div class="text-xs-center">
+                                <h3> Send a Text Message:</h3>
+                                <hr class="mt-2 mb-2">
+                            </div>
+
+                            <!--Body-->
+                            <div class="md-form">
+                                <i class="fa fa-user prefix"></i>
+                                <input type="text" id="form2" class="form-control">
+                                <label for="form2">Recepient</label>
+                            </div>
+
+                            <div class="md-form">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="text" id="form4" class="form-control">
+                                <label for="form4">Your Message</label>
+                            </div>
+
+                            <div class="text-xs-center">
+                                <button class="btn btn-deep-purple">Send</button>
+                            </div>
+
+                        </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="map-container" class="z-depth-1 wow fadeIn" style="height: 500px"></div>
+            </div>        
+        </div>
+    </div>
+</main>
+<!-- /.Main -->
+
+<!-- This div tag creates vertical space <div style="height:2000px;"></div> -->
+
+
+
+    <!--Google Maps-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwFLLWNnlIxPpORx9U1LbdpI8ZgjN-6Lc&callback=initMap"></script>
+
+    <script>
+        function init_map() {
+
+            var var_location = new google.maps.LatLng(19.209537,72.864102);
+            var var_location2 = new google.maps.LatLng(19.210831,72.874741);
+
+            var var_mapoptions = {
+                center: var_location,
+
+                zoom: 12
+            };
+
+            var var_marker = new google.maps.Marker({
+                position: var_location,
+                map: var_map,
+                title: "Thakur Complex"
+            });
+
+            var var_map = new google.maps.Map(document.getElementById("map-container"),
+                var_mapoptions);
+
+            var_marker.setMap(var_map);
+
+        }
+
+        google.maps.event.addDomListener(window, 'load', init_map);
+    </script>
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/tether.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>

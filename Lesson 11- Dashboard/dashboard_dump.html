@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="dashboardstyle.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-toggleable-md navbar-light">
+            <div class="container">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="color: white;">
+                    <strong>Dashboard</strong>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav1">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" style="color: white;">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ordersummary.html" style="color: white;">Orders<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="updateinventory.html" style="color: white;">Inventory<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Sakhiorders.html" style="color: white;">Sakhi<span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--/.Navbar-->
+    </header>
+
+<!-- Main -->
+<main class="mt-5">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="card-text">Statistics</h1>
+                <hr>
+            </div>        
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4">
+               <div class="card">
+               <div class="card-block">
+               <div class="row">
+                   <div class="col-md-6">
+                       <span class="badge indigo"><h5 style="color: white;">Highest Sold<br>Flavour</h5></span>
+                   </div>
+                   <div class="col-md-6 text-right">
+                       <h4 class="card-text" style="color: black;">Jeera-1000 Kgs</h4>
+                   </div>
+               </div>
+               </div>
+               </div>
+            </div>
+
+            <div class="col-md-4">
+               <div class="card">
+               <div class="card-block">
+               <div class="row">
+                   <div class="col-md-6">
+                       <span class="badge indigo"><h5 style="color: white;">Highest Sales<br>(Sakhi)</h5></span>
+                   </div>
+                   <div class="col-md-6 text-right">
+                       <h2 class="card-text">Name</h2>
+                   </div>
+               </div>
+               </div>
+               </div>
+            </div>
+
+            <div class="col-md-4">
+               <div class="card">
+               <div class="card-block">
+               <div class="row">
+                   <div class="col-md-6">
+                       <span class="badge indigo"><h5 style="color: white;">Highest Sales<br>(Location)</h5>
+                       </span>
+                   </div>
+                   <div class="col-md-6 text-right">
+                       <h2 class="card-text">Andheri</h2>
+                   </div>
+               </div>
+               </div>
+               </div>
+            </div>
+
+        </div>
+
+        <div class="row" style="margin-top: 2em; margin-bottom: 2em;">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-block">
+                        <div id="timegraph" style="width: 100%; height: 100%;"></div>   
+                    </div>
+                </div>      
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-block">
+                        <div id="barchart" style="width: 100%; height: 100%;"></div>   
+                    </div>
+                </div>      
+            </div>
+        </div>
+
+<div class="row" style="margin-bottom: 2em;">
+
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-block">
+    <table class="table">
+    <thead>
+    <p style="color: black;">Top 5 Sakhi</p>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Sales</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row"><i class="fa fa-user"></i></th>
+            <td>Name</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <th scope="row"><i class="fa fa-user"></i></th>
+            <td>Name</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <th scope="row"><i class="fa fa-user"></i></th>
+            <td>Name</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <th scope="row"><i class="fa fa-user"></i></th>
+            <td>Name</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <th scope="row"><i class="fa fa-user"></i></th>
+            <td>Name</td>
+            <td>1000</td>
+        </tr>
+
+    </tbody>
+</table>
+      </div>
+    </div>
+  </div>
+
+<div class="col-md-6">
+  <div class="card">
+    <div class="card-block">
+      <div id="donut" style="width: 100%; height: 350px;"></div>   
+    </div>
+  </div> 
+</div>
+
+
+</div>
+
+
+
+    </div>
+
+</main>
+<!-- /.Main -->
+
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Fulfilled',     60],
+          ['Pending',      55],
+
+        ]);
+
+        var options = {
+          title: 'Order Summary',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donut'));
+        chart.draw(data, options);
+      }
+    </script>
+
+
+
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Jeera', 'Khichdi','Nachni'],
+          ['2004',  1000,      400, 700],
+          ['2005',  1170,      460, 1010],
+          ['2006',  660,       1120, 800],
+          ['2007',  1030,      540, 450]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('timegraph'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Khakra', 'Kg'],
+          ['Jeera', 1000],
+          ['Khichdi', 1170],
+          ['Peppery Oats', 660],
+          ['Punjabi masala', 1030]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Khakra Sales',
+            subtitle: 'No. of Kgs Sold',
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/tether.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>
