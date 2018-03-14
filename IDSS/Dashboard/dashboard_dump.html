@@ -1,0 +1,161 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="dashboardstyle.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-toggleable-md navbar-light">
+            <div class="container">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="color: white;">
+                    <strong>IDSS</strong>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav1">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" style="color: white;">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ordersummary.html" style="color: white;">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="updateinventory.html" style="color: white;">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Sakhiorders.html" style="color: white;">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--/.Navbar-->
+    </header>
+
+<!-- Main -->
+<main class="mt-5">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h5 class="card-text" style="color: black;">International Business Machines Corp.</h5>
+                <hr>
+            </div>        
+        </div>
+
+
+        <div class="row">
+
+           
+        </div>
+
+        <div class="row" style="margin-top: 10px; margin-bottom: 2em;">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-block">
+                         <div id="chart_div" style="height: 300px"></div>
+                    </div>
+                </div>      
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 10px; margin-bottom: 2em;">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-block">
+                         <p style="color: black;">Predicted values for comparison - Close price: $100 Open price: $100</p>
+                         <p style="color: black;">Actual values for comparison - Close price: $100 Open price: $100</p>
+                         <p style="color: black;">Next Predicted values - Close price: $100 Open price: $100</p>
+                    </div>
+                </div>      
+            </div>
+        </div>
+
+
+    </div>
+
+</main>
+<!-- /.Main -->
+
+
+
+<script type="text/javascript">
+  google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawLineColors);
+
+function drawLineColors() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'X');
+      data.addColumn('number', 'Open');
+      data.addColumn('number', 'Close');
+
+      data.addRows([
+        [0, 0, 0],    [1, 10, 5],   [2, 23, 15],  [3, 17, 9],   [4, 18, 10],  [5, 9, 5],
+        [6, 11, 3],   [7, 27, 19],  [8, 33, 25],  [9, 40, 32],  [10, 32, 24], [11, 35, 27],
+        [12, 30, 22], [13, 40, 32], [14, 42, 34], [15, 47, 39], [16, 44, 36], [17, 48, 40],
+        [18, 52, 44], [19, 54, 46], [20, 42, 34], [21, 55, 47], [22, 56, 48], [23, 57, 49],
+        [24, 60, 52], [25, 50, 42], [26, 52, 44], [27, 51, 43], [28, 49, 41], [29, 53, 45],
+        [30, 55, 47], [31, 60, 52], [32, 61, 53], [33, 59, 51], [34, 62, 54], [35, 65, 57],
+        [36, 62, 54], [37, 58, 50], [38, 55, 47], [39, 61, 53], [40, 64, 56], [41, 65, 57],
+        [42, 63, 55], [43, 66, 58], [44, 67, 59], [45, 69, 61], [46, 69, 61], [47, 70, 62],
+        [48, 72, 64], [49, 68, 60], [50, 66, 58], [51, 65, 57], [52, 67, 59], [53, 70, 62],
+        [54, 71, 63], [55, 72, 64], [56, 73, 65], [57, 75, 67], [58, 70, 62], [59, 68, 60],
+        [60, 64, 56], [61, 60, 52], [62, 65, 57], [63, 67, 59], [64, 68, 60], [65, 69, 61],
+        [66, 70, 62], [67, 72, 64], [68, 75, 67], [69, 80, 72]
+      ]);
+
+      var options = {
+        hAxis: {
+          title: 'Time'
+        },
+        vAxis: {
+          title: 'Share Price'
+        },
+        colors: ['#FF3547', '#4285F4']
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+</script>
+
+
+
+
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/tether.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>

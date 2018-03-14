@@ -1,0 +1,37 @@
+/* YOUR CUSTOM STYLES */
+
+body{
+	color: #fff;
+}
+
+.mt-5, .my-5 {
+    margin-top: 2rem!important;
+}
+
+nav{
+	background: #0195BA;
+}
+
+.whitecolor{
+	color: white;
+}
+
+.nav-item a {
+    transition: .35s;
+    color: #ffffff;
+}
+
+h2{
+	color: black;
+}
+
+table{
+	color: black;
+}
+
+h1{
+	color: black;
+}
+
+
+/*                    */
